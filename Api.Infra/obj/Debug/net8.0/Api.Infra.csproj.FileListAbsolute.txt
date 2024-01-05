@@ -1,0 +1,17 @@
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\bin\Debug\net8.0\Api.Infra.deps.json
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\bin\Debug\net8.0\Api.Infra.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\bin\Debug\net8.0\Api.Infra.pdb
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\bin\Debug\net8.0\Api.Domain.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\bin\Debug\net8.0\Api.Domain.pdb
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\obj\Debug\net8.0\Api.Infra.csproj.AssemblyReference.cache
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\obj\Debug\net8.0\Api.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\obj\Debug\net8.0\Api.Infra.AssemblyInfoInputs.cache
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\obj\Debug\net8.0\Api.Infra.AssemblyInfo.cs
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\obj\Debug\net8.0\Api.Infra.csproj.CoreCompileInputs.cache
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\obj\Debug\net8.0\Api.Infra.csproj.CopyComplete
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\obj\Debug\net8.0\Api.Infra.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\obj\Debug\net8.0\refint\Api.Infra.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\obj\Debug\net8.0\Api.Infra.pdb
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\obj\Debug\net8.0\ref\Api.Infra.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\bin\Debug\net8.0\Api.Shared.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\bin\Debug\net8.0\Api.Shared.pdb

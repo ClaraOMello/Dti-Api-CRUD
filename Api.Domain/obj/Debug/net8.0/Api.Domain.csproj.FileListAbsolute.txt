@@ -1,0 +1,12 @@
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\bin\Debug\net8.0\Api.Domain.deps.json
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\bin\Debug\net8.0\Api.Domain.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\bin\Debug\net8.0\Api.Domain.pdb
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\Api.Domain.csproj.AssemblyReference.cache
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\Api.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\Api.Domain.AssemblyInfoInputs.cache
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\Api.Domain.AssemblyInfo.cs
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\Api.Domain.csproj.CoreCompileInputs.cache
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\Api.Domain.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\refint\Api.Domain.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\Api.Domain.pdb
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\ref\Api.Domain.dll

@@ -1,0 +1,11 @@
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\bin\Debug\net8.0\Api.Shared.deps.json
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\bin\Debug\net8.0\Api.Shared.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\bin\Debug\net8.0\Api.Shared.pdb
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\obj\Debug\net8.0\Api.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\obj\Debug\net8.0\Api.Shared.AssemblyInfoInputs.cache
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\obj\Debug\net8.0\Api.Shared.AssemblyInfo.cs
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\obj\Debug\net8.0\Api.Shared.csproj.CoreCompileInputs.cache
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\obj\Debug\net8.0\Api.Shared.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\obj\Debug\net8.0\refint\Api.Shared.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\obj\Debug\net8.0\Api.Shared.pdb
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\obj\Debug\net8.0\ref\Api.Shared.dll
