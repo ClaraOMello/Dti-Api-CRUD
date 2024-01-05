@@ -10,3 +10,4 @@ C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\refint\Api.Domain.dll
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\Api.Domain.pdb
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\ref\Api.Domain.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Domain\obj\Debug\net8.0\Api.Domain.sourcelink.json

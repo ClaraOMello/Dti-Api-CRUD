@@ -20,10 +20,7 @@ namespace Api.Infra
 
         public Cliente AtualizarCliente(Cliente cliente)
         {
-            // cliente -> clienteEntity
-            // converter (tabelas)
-            // shared --> ITwoWayConverter<TType, TOtherType>
-            // Infra --> converters --> ClienteConverter : ITwoWayConverter<Cliente, ClienteEntity>
+            cliente.Modificado = true;
             _tabelaCliente.UpdateEntity(_converter.Convert(cliente), ETag.All);
             return BuscarCliente(cliente.Id);
         }
@@ -56,6 +53,7 @@ namespace Api.Infra
                     .DefaultIfEmpty(0)
                     .Max();
             cliente.Id = maxId + 1;
+            cliente.Modificado = false;
 
             try
             {

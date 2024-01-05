@@ -16,7 +16,8 @@ namespace Api.Infra.Converters
                 Email = entidade.Email,
                 FaixaEtaria = entidade.FaixaEtaria,
                 Idade = entidade.Idade,
-                Nome = entidade.Nome
+                Nome = entidade.Nome,
+                Modificado = entidade.Modificado,
             };
         }
 
@@ -30,6 +31,7 @@ namespace Api.Infra.Converters
                 Idade= cliente.Idade,
                 FaixaEtaria = cliente.FaixaEtaria,
                 CPF= cliente.CPF,
+                Modificado = cliente.Modificado,
                 PartitionKey = cliente.Id.ToString(),
                 RowKey = "",
                 Timestamp = DateTime.Now,

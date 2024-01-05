@@ -13,3 +13,4 @@ C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Applica
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Application\obj\Debug\net8.0\refint\Api.Application.dll
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Application\obj\Debug\net8.0\Api.Application.pdb
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Application\obj\Debug\net8.0\ref\Api.Application.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Application\obj\Debug\net8.0\Api.Application.sourcelink.json

@@ -16,6 +16,8 @@ namespace Api.Infra.TablesEntities
 
         public int? Idade { set; get; }
 
+        public bool Modificado { set; get; }
+
         public FaixaEtaria FaixaEtaria { set; get; }
         public string PartitionKey { get; set; }
         public string RowKey { get; set; }

@@ -15,3 +15,4 @@ C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\o
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\obj\Debug\net8.0\ref\Api.Infra.dll
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\bin\Debug\net8.0\Api.Shared.dll
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\bin\Debug\net8.0\Api.Shared.pdb
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Infra\obj\Debug\net8.0\Api.Infra.sourcelink.json

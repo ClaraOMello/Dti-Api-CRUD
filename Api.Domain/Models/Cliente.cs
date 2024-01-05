@@ -17,5 +17,7 @@ namespace Api.Models
         public int? Idade { set; get; }
 
         public FaixaEtaria FaixaEtaria { set; get; }
+
+        public bool Modificado { set; get; } 
     }
 }

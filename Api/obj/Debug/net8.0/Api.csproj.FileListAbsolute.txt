@@ -82,3 +82,4 @@ C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api\bin\Deb
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api\bin\Debug\net8.0\Api.Shared.dll
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api\bin\Debug\net8.0\Api.Shared.pdb
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api\obj\Debug\net8.0\Api.sourcelink.json
