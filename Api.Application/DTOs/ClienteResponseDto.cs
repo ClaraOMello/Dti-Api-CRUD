@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 
 namespace Api.Application.DTOs
 {
@@ -26,5 +21,8 @@ namespace Api.Application.DTOs
 
         [JsonPropertyName("idade")]
         public int Idade { set; get; }
+
+        [JsonPropertyName("modificado")]
+        public bool Modificado { set; get; }
     }
 }

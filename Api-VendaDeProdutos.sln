@@ -25,7 +25,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Infra", "Api.Infra\Api.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{E78786F8-E794-44B5-89C4-8424DBF5C426}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Shared", "Api.Shared\Api.Shared.csproj", "{1348DC97-9DE7-4586-B38B-3660DA562247}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Shared", "Api.Shared\Api.Shared.csproj", "{1348DC97-9DE7-4586-B38B-3660DA562247}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{CB963F34-8C2C-4D28-B963-55604A891021}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

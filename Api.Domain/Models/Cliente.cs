@@ -1,6 +1,4 @@
 ﻿using Api.Domain.Models.Enums;
-using Azure;
-using Azure.Data.Tables;
 
 namespace Api.Models
 {

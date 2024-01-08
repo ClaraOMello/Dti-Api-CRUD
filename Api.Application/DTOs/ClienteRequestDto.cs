@@ -19,5 +19,8 @@ namespace Api.Application.DTOs
         [JsonPropertyName("idade")]
         public int? Idade{ set; get; }
 
+        [JsonPropertyName("modificado")]
+        public bool Modificado { set; get; }
+
     }
 }
