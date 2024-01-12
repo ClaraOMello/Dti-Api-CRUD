@@ -14,7 +14,6 @@ namespace Api.Domain.UnitTest
         // interfaces da classe
         private Mock<IProcessarClienteRepository> _processarClienteRepositoryMock;
         private Mock<IProcessarFaixaEtaria> _processarFaixaEtariaMock;
-        private ProcessarClienteService _service;
 
         private Fixture _fixture;
 
@@ -30,8 +29,6 @@ namespace Api.Domain.UnitTest
         {
             _processarClienteRepositoryMock = new Mock<IProcessarClienteRepository>();
             _processarFaixaEtariaMock = new Mock<IProcessarFaixaEtaria>();
-
-            _service = new ProcessarClienteService(_processarFaixaEtariaMock.Object, _processarClienteRepositoryMock.Object);
         }
 
         [Test]
@@ -69,67 +66,142 @@ namespace Api.Domain.UnitTest
         }
 
         [Test]
-        public void DeveCriarClienteCasoNaoExistaNaAtulizacao()
+        public void DeveAtualizarClienteCasoExistaENaoPossuaIdade()
         {
-            var id = 1;
-            Cliente nulo = null;
+            int? idade = null;
+            var cliente = _fixture.Create<Cliente>();
             var clienteAlteracoes = _fixture.Build<Cliente>()
-                .With(c => c.Id, id)
-                .With(c => c.Nome, "Novo Nome")
-                .With(c => c.Modificado, false)
+                .With(c => c.Idade, idade)
+                .Create();
+            var clienteModificado = _fixture.Build<Cliente>()
+                .With(c => c.Idade, idade)
+                .With(c => c.Modificado, true)
                 .Create();
 
             _processarClienteRepositoryMock
-                .Setup(r => r.BuscarCliente(id))
+                .Setup(r => r.BuscarCliente(clienteAlteracoes.Id))
+                .Returns(cliente);
+
+            _processarClienteRepositoryMock
+                .Setup(r => r.AtualizarCliente(It.IsAny<Cliente>()))
+                .Returns(clienteModificado);
+
+            var service = Instanciar();
+            var retorno = service.AtualizarCliente(clienteAlteracoes);
+
+            retorno.Should().BeOfType<Cliente>();
+            retorno.Should().Be(clienteModificado);
+            Assert.IsTrue(retorno.Modificado);
+            Assert.That(retorno.Idade, Is.EqualTo(null));
+        }
+
+        [Test]
+        public void DeveCriarClienteCasoNaoExistaNaAtulizacao()
+        {
+            var cliente = _fixture.Build<Cliente>()
+                .With(c => c.Modificado, false)
+                .Create();
+            Cliente nulo = null;
+
+            _processarClienteRepositoryMock
+                .Setup(r => r.BuscarCliente(cliente.Id))
                 .Returns(nulo);
 
             _processarClienteRepositoryMock
-                .Setup(r => r.CriarNovoCliente(clienteAlteracoes))
-                .Returns(clienteAlteracoes);
+                .Setup(r => r.CriarNovoCliente(cliente))
+                .Returns(cliente);
 
-            var retorno = _service.AtualizarCliente(clienteAlteracoes);
+            var service = Instanciar();
+            var retorno = service.AtualizarCliente(cliente);
 
             Assert.IsFalse(retorno.Modificado);
-            Assert.That(retorno.Nome, Is.EqualTo(clienteAlteracoes.Nome));
+            retorno.Should().BeEquivalentTo(cliente);
         }
 
         [Test]
         public void DeveBuscarERetornarUmCliente()
         {
-            var id = 1;
             var cliente = _fixture.Build<Cliente>()
-                .With(c => c.Id, id)
                 .Create();
 
             _processarClienteRepositoryMock
-                .Setup(r => r.BuscarCliente(id))
+                .Setup(r => r.BuscarCliente(cliente.Id))
                 .Returns(cliente);
 
-            var retorno = _service.BuscarCliente(id);
+            var service = Instanciar();
+            var retorno = service.BuscarCliente(cliente.Id);
         }
 
         [Test]
         public void DeveBuscarERetornarUmaListaDeClientes()
         {
-            Assert.Pass();
+            var clientes = _fixture.CreateMany<Cliente>(4).ToList();
+
+            _processarClienteRepositoryMock
+                .Setup(r => r.BuscarTodosClientes())
+                .Returns(Task.FromResult(clientes));
+
+            var service = Instanciar();
+            var retorno = service.BuscarTodosClientes();
         }
 
         [Test]
         public void DeveCriarClienteCasoIdadeSejaInformada()
         {
-            Assert.Pass();
+            var cliente = _fixture.Build<Cliente>()
+                .With(c => c.Idade, 6)
+                .With(c => c.FaixaEtaria, FaixaEtaria.Adolescente)
+                .With(c => c.Modificado, false)
+                .Create();
+
+            _processarFaixaEtariaMock
+                .Setup(r => r.DefinirFaixaEtaria(6))
+                .Returns(FaixaEtaria.Crianca);
+
+            _processarClienteRepositoryMock
+                .Setup(r => r.CriarNovoCliente(cliente))
+                .Returns(cliente);
+
+            var service = Instanciar();
+            var retorno = service.CriarNovoCliente(cliente);
+
+            retorno.Should().Be(cliente);
+            Assert.IsFalse(retorno.Modificado);
+            Assert.That(retorno.FaixaEtaria, Is.EqualTo(FaixaEtaria.Crianca));
         }
 
         [Test]
         public void DeveCriarClienteCasoIdadeNaoSejaInformada()
         {
-            Assert.Pass();
+            int? idade = null;
+            var cliente = _fixture.Build<Cliente>()
+                .With(c => c.Idade, idade)
+                .With(c => c.Modificado, false)
+                .Create();
+
+            _processarClienteRepositoryMock
+                .Setup(r => r.CriarNovoCliente(cliente))
+                .Returns(cliente);
+
+            var service = Instanciar();
+            var retorno = service.CriarNovoCliente(cliente);
+
+            retorno.Should().Be(cliente);
+            Assert.IsFalse(retorno.Modificado);
         }
 
         [Test]
-        public void DeveExcluirClienteRetornandoQueAOperacaoFoiBemSucedida()
+        public void DeveExcluirClienteComSucesso()
         {
-            Assert.Pass();
+            var id = 1;
+            _processarClienteRepositoryMock
+                .Setup(r => r.ExcluirCliente(id))
+                .Returns(true);
+
+            var service = Instanciar();
+            var retorno = service.ExcluirCliente(id);
+
+            Assert.IsTrue(retorno);
         }
 
         private ProcessarClienteService Instanciar()
