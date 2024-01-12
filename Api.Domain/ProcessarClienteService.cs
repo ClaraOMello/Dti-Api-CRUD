@@ -18,16 +18,20 @@ namespace Api.Domain
 
         public Cliente AtualizarCliente(Cliente cliente)
         {
-            // verificar existencia de cliente BuscarCliente()
-            if ( cliente.Idade.HasValue )
+            if ( BuscarCliente(cliente.Id) != null )
             {
-                cliente.FaixaEtaria = _processarFaixaEtaria.DefinirFaixaEtaria((int) cliente.Idade);
+                if ( cliente.Idade.HasValue )
+                {
+                    cliente.FaixaEtaria = _processarFaixaEtaria.DefinirFaixaEtaria((int) cliente.Idade);
+                }
+                return _processarClienteRepository.AtualizarCliente(cliente);
             }
-            return _processarClienteRepository.AtualizarCliente(cliente);
+            return CriarNovoCliente(cliente);
         }
 
         public Cliente BuscarCliente(int id)
         {
+            var cliente = _processarClienteRepository.BuscarCliente(id);
             return _processarClienteRepository.BuscarCliente(id);
 
         }

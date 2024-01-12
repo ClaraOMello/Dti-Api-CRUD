@@ -9,3 +9,4 @@ C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\obj\Debug\net8.0\refint\Api.Shared.dll
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\obj\Debug\net8.0\Api.Shared.pdb
 C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\obj\Debug\net8.0\ref\Api.Shared.dll
+C:\Users\dti Digital\Documents\Learning\Projetin\Api-VendaDeProdutos\Api.Shared\obj\Debug\net8.0\Api.Shared.sourcelink.json
