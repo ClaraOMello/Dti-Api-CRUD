@@ -4,14 +4,83 @@
     "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Host.UnitTests\\Api.Host.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Host.UnitTests\\Api.Host.UnitTests.csproj": {
+    "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Application\\Api.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Host.UnitTests\\Api.Host.UnitTests.csproj",
-        "projectName": "Api.Host.UnitTests",
-        "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Host.UnitTests\\Api.Host.UnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Application\\Api.Application.csproj",
+        "projectName": "Api.Application",
+        "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Application\\Api.Application.csproj",
         "packagesPath": "C:\\Users\\dti Digital\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Host.UnitTests\\obj\\",
+        "outputPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dti Digital\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Domain\\Api.Domain.csproj": {
+                "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Domain\\Api.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Domain\\Api.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Domain\\Api.Domain.csproj",
+        "projectName": "Api.Domain",
+        "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Domain\\Api.Domain.csproj",
+        "packagesPath": "C:\\Users\\dti Digital\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +113,94 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Azure.Data.Tables": {
+              "target": "Package",
+              "version": "[12.8.2, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Host.UnitTests\\Api.Host.UnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Host.UnitTests\\Api.Host.UnitTests.csproj",
+        "projectName": "Api.Host.UnitTests",
+        "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Host.UnitTests\\Api.Host.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\dti Digital\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Host.UnitTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dti Digital\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Application\\Api.Application.csproj": {
+                "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Application\\Api.Application.csproj"
+              },
+              "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api\\Api.csproj": {
+                "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api\\Api.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoFixture": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "AutoFixture.AutoMoq": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.12.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.6.0, )"
@@ -77,6 +234,239 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Infra\\Api.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Infra\\Api.Infra.csproj",
+        "projectName": "Api.Infra",
+        "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Infra\\Api.Infra.csproj",
+        "packagesPath": "C:\\Users\\dti Digital\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dti Digital\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Domain\\Api.Domain.csproj": {
+                "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Domain\\Api.Domain.csproj"
+              },
+              "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Shared\\Api.Shared.csproj": {
+                "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Shared\\Api.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Azure.Data.Tables": {
+              "target": "Package",
+              "version": "[12.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Shared\\Api.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Shared\\Api.Shared.csproj",
+        "projectName": "Api.Shared",
+        "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Shared\\Api.Shared.csproj",
+        "packagesPath": "C:\\Users\\dti Digital\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dti Digital\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api\\Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api\\Api.csproj",
+        "projectName": "Api",
+        "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api\\Api.csproj",
+        "packagesPath": "C:\\Users\\dti Digital\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dti Digital\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Application\\Api.Application.csproj": {
+                "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Application\\Api.Application.csproj"
+              },
+              "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Domain\\Api.Domain.csproj": {
+                "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Domain\\Api.Domain.csproj"
+              },
+              "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Infra\\Api.Infra.csproj": {
+                "projectPath": "C:\\Users\\dti Digital\\Documents\\Learning\\Projetin\\Api-VendaDeProdutos\\Api.Infra\\Api.Infra.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Autofac.Extras.DynamicProxy": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Azure.Data.Tables": {
+              "target": "Package",
+              "version": "[12.8.2, )"
+            },
+            "Microsoft.WindowsAzure.ConfigurationManager": {
+              "target": "Package",
+              "version": "[3.2.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

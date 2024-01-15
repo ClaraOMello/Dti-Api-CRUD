@@ -1,5 +1,4 @@
 ﻿using Api.Domain.Interfaces;
-using Api.Infra.Interfaces;
 using Api.Models;
 
 namespace Api.Domain
@@ -31,9 +30,7 @@ namespace Api.Domain
 
         public Cliente BuscarCliente(int id)
         {
-            var cliente = _processarClienteRepository.BuscarCliente(id);
             return _processarClienteRepository.BuscarCliente(id);
-
         }
 
         public List<Cliente> BuscarTodosClientes()

@@ -1,5 +1,5 @@
 ﻿using Api.Infra.Converters;
-using Api.Infra.Interfaces;
+using Api.Domain.Interfaces;
 using Api.Infra.TablesEntities;
 using Api.Models;
 using Azure;
@@ -20,6 +20,7 @@ namespace Api.Infra
 
         public Cliente AtualizarCliente(Cliente cliente)
         {
+            
             cliente.Modificado = true;
             _tabelaCliente.UpdateEntity(_converter.Convert(cliente), ETag.All);
             return BuscarCliente(cliente.Id);

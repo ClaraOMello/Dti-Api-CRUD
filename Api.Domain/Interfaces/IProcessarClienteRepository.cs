@@ -1,6 +1,6 @@
 ﻿using Api.Models;
 
-namespace Api.Infra.Interfaces
+namespace Api.Domain.Interfaces
 {
     public interface IProcessarClienteRepository
     {

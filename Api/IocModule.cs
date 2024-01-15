@@ -4,7 +4,6 @@ using Api.Application.Interfaces;
 using Api.Domain;
 using Api.Domain.Interfaces;
 using Api.Infra;
-using Api.Infra.Interfaces;
 using Autofac;
 
 namespace Api

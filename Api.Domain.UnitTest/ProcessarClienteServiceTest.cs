@@ -1,7 +1,6 @@
 using AutoFixture.AutoMoq;
 using AutoFixture;
 using Moq;
-using Api.Infra.Interfaces;
 using Api.Models;
 using Api.Domain.Interfaces;
 using Api.Domain.Models.Enums;
@@ -71,7 +70,7 @@ namespace Api.Domain.UnitTest
             int? idade = null;
             var cliente = _fixture.Create<Cliente>();
             var clienteAlteracoes = _fixture.Build<Cliente>()
-                .With(c => c.Idade, idade)
+                .Without(c => c.Idade)
                 .Create();
             var clienteModificado = _fixture.Build<Cliente>()
                 .With(c => c.Idade, idade)
@@ -93,19 +92,16 @@ namespace Api.Domain.UnitTest
             retorno.Should().Be(clienteModificado);
             Assert.IsTrue(retorno.Modificado);
             Assert.That(retorno.Idade, Is.EqualTo(null));
+            _processarClienteRepositoryMock
+                .Verify(r => r.CriarNovoCliente(cliente), Times.Never);
         }
 
         [Test]
-        public void DeveCriarClienteCasoNaoExistaNaAtulizacao()
+        public void DeveCriarClienteCasoNaoExistaNaAtualizacao()
         {
             var cliente = _fixture.Build<Cliente>()
                 .With(c => c.Modificado, false)
                 .Create();
-            Cliente nulo = null;
-
-            _processarClienteRepositoryMock
-                .Setup(r => r.BuscarCliente(cliente.Id))
-                .Returns(nulo);
 
             _processarClienteRepositoryMock
                 .Setup(r => r.CriarNovoCliente(cliente))
@@ -116,6 +112,9 @@ namespace Api.Domain.UnitTest
 
             Assert.IsFalse(retorno.Modificado);
             retorno.Should().BeEquivalentTo(cliente);
+
+            _processarClienteRepositoryMock
+                .Verify(r => r.BuscarCliente(cliente.Id), Times.Once);
         }
 
         [Test]
@@ -130,6 +129,8 @@ namespace Api.Domain.UnitTest
 
             var service = Instanciar();
             var retorno = service.BuscarCliente(cliente.Id);
+
+            retorno.Should().Be(cliente);
         }
 
         [Test]
@@ -143,6 +144,8 @@ namespace Api.Domain.UnitTest
 
             var service = Instanciar();
             var retorno = service.BuscarTodosClientes();
+
+            retorno.Should().BeEquivalentTo(clientes);
         }
 
         [Test]
@@ -173,9 +176,8 @@ namespace Api.Domain.UnitTest
         [Test]
         public void DeveCriarClienteCasoIdadeNaoSejaInformada()
         {
-            int? idade = null;
             var cliente = _fixture.Build<Cliente>()
-                .With(c => c.Idade, idade)
+                .Without(c => c.Idade)
                 .With(c => c.Modificado, false)
                 .Create();
 
@@ -188,18 +190,18 @@ namespace Api.Domain.UnitTest
 
             retorno.Should().Be(cliente);
             Assert.IsFalse(retorno.Modificado);
+            Assert.IsNull(retorno.Idade);
         }
 
         [Test]
         public void DeveExcluirClienteComSucesso()
-        {
-            var id = 1;
+        {           
             _processarClienteRepositoryMock
-                .Setup(r => r.ExcluirCliente(id))
+                .Setup(r => r.ExcluirCliente(It.IsAny<int>()))
                 .Returns(true);
 
             var service = Instanciar();
-            var retorno = service.ExcluirCliente(id);
+            var retorno = service.ExcluirCliente(It.IsAny<int>());
 
             Assert.IsTrue(retorno);
         }

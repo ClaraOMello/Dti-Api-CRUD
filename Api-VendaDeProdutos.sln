@@ -34,11 +34,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Domain.UnitTest", "Api.Domain.UnitTest\Api.Domain.UnitTest.csproj", "{81E12CDC-775E-4B7D-BC19-2822493D0E06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Application.UnitTests", "Api.Application.UnitTests\Api.Application.UnitTests.csproj", "{CC8ECA18-D1A6-4D1B-B315-A795F23FE1C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Application.UnitTests", "Api.Application.UnitTests\Api.Application.UnitTests.csproj", "{CC8ECA18-D1A6-4D1B-B315-A795F23FE1C8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{51024D21-7D84-4328-AD0B-5ECC0EE1DC6B} = {51024D21-7D84-4328-AD0B-5ECC0EE1DC6B}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Host.UnitTests", "Api.Host.UnitTests\Api.Host.UnitTests.csproj", "{F184A6DB-C1ED-4980-9A28-0B4904FBCBC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Host.UnitTests", "Api.Host.UnitTests\Api.Host.UnitTests.csproj", "{F184A6DB-C1ED-4980-9A28-0B4904FBCBC9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2AA37D7C-6EF2-4AC6-8522-4C3B357D55FB} = {2AA37D7C-6EF2-4AC6-8522-4C3B357D55FB}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Infra.UnitTests", "Api.Infra.UnitTests\Api.Infra.UnitTests.csproj", "{467C83C9-ED27-40E1-AC94-D7A9C9CD78D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Infra.UnitTests", "Api.Infra.UnitTests\Api.Infra.UnitTests.csproj", "{467C83C9-ED27-40E1-AC94-D7A9C9CD78D7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F82B4843-3BB7-4581-ADE9-796BF2288EFC} = {F82B4843-3BB7-4581-ADE9-796BF2288EFC}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
