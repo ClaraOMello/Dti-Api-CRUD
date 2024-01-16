@@ -4,6 +4,10 @@ using Api.Application.Interfaces;
 using Api.Domain;
 using Api.Domain.Interfaces;
 using Api.Infra;
+using Api.Infra.Converters;
+using Api.Infra.TablesEntities;
+using Api.Models;
+using Api.Shared;
 using Autofac;
 
 namespace Api
@@ -16,6 +20,9 @@ namespace Api
             builder.RegisterType<ProcessarClienteService>().As<IProcessarClienteService>();
             builder.RegisterType<ProcessarFaixaEtaria>().As<IProcessarFaixaEtaria>();
             builder.RegisterType<ProcessarClienteAzureTable>().As<IProcessarClienteRepository>();
+            builder.RegisterType<ClienteConverter>().As<ITwoWayConverter<Cliente, ClienteEntity>>();
+            builder.RegisterType<ClienteConverter>().As<ITwoWayConverter<Cliente, ClienteEntity>>();
+
         }
     }
 }

@@ -4,23 +4,25 @@ using Api.Infra.TablesEntities;
 using Api.Models;
 using Azure;
 using Azure.Data.Tables;
+using Api.Shared;
 
 namespace Api.Infra
 {
     public class ProcessarClienteAzureTable : IProcessarClienteRepository
     {
         private readonly TableClient _tabelaCliente;
-        private readonly ClienteConverter _converter;
+        private readonly ITwoWayConverter<Cliente, ClienteEntity> _converter;
 
-        public ProcessarClienteAzureTable()
+        public ProcessarClienteAzureTable(
+            TableClient tableCliente,
+            ITwoWayConverter<Cliente, ClienteEntity> converter)
         {
             _tabelaCliente = new TableClient("UseDevelopmentStorage=true", "Cliente");
-            _converter = new ClienteConverter();
+            _converter = converter;
         }
 
         public Cliente AtualizarCliente(Cliente cliente)
         {
-            
             cliente.Modificado = true;
             _tabelaCliente.UpdateEntity(_converter.Convert(cliente), ETag.All);
             return BuscarCliente(cliente.Id);
