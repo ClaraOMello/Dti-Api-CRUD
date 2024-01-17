@@ -75,7 +75,7 @@ namespace Api.Host.UnitTests
         }
 
         [Test]
-        public void DeveCriarClienteERetornarClienteComId()
+        public void DeveCriarClienteComSucesso()
         {
             var requestDto = _fixture.Create<ClienteRequestDto>();
             var responseDto = _fixture.Create<ClienteResponseDto>();

@@ -61,6 +61,7 @@ namespace Api.Application
             {
                 return new ClienteResponseDto
                 {
+                    Id = 400,
                     Nome = "!! Fail !!"
                 };
             }
