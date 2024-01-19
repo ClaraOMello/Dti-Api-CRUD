@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using AutoFixture.AutoMoq;
 using AutoFixture;
 using Moq;

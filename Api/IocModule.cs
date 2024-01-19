@@ -9,6 +9,7 @@ using Api.Infra.TablesEntities;
 using Api.Models;
 using Api.Shared;
 using Autofac;
+using Azure.Data.Tables;
 
 namespace Api
 {
@@ -22,7 +23,10 @@ namespace Api
             builder.RegisterType<ProcessarClienteAzureTable>().As<IProcessarClienteRepository>();
             builder.RegisterType<ClienteConverter>().As<ITwoWayConverter<Cliente, ClienteEntity>>();
             builder.RegisterType<ClienteConverter>().As<ITwoWayConverter<Cliente, ClienteEntity>>();
-
+            builder.Register(c =>
+            {
+                return new TableServiceClient("UseDevelopmentStorage=true");
+            }).As<TableServiceClient>().SingleInstance();
         }
     }
 }

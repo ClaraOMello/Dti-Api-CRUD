@@ -14,7 +14,6 @@ namespace Api.Application.UnitTests
     {
         private Fixture _fixture;
         private Mock<IProcessarClienteService> _processarClienteServiceMock;
-        // private Mock<IMapper> _mapperMock;
 
         [OneTimeSetUp]
         public void SetupFixture()
@@ -27,7 +26,6 @@ namespace Api.Application.UnitTests
         public void Setup()
         {
             _processarClienteServiceMock = new Mock<IProcessarClienteService>();
-            // _mapperMock = new Mock<IMapper>();
         }
 
         [Test]
@@ -84,7 +82,7 @@ namespace Api.Application.UnitTests
         }
 
         [Test]
-        public void DeveCriarClienteComServiceNaoNulo()
+        public void DeveCriarClienteComSucesso()
         {
             var request = _fixture.Create<ClienteRequestDto>();
             var response = _fixture.Create<ClienteResponseDto>();

@@ -10,27 +10,30 @@ namespace Api.Infra
 {
     public class ProcessarClienteAzureTable : IProcessarClienteRepository
     {
-        private readonly TableClient _tabelaCliente;
+        private readonly TableClient _tableClient;
+        private readonly TableServiceClient _serviceClient;
         private readonly ITwoWayConverter<Cliente, ClienteEntity> _converter;
 
         public ProcessarClienteAzureTable(
-            TableClient tableCliente,
+            TableServiceClient serviceClient,
             ITwoWayConverter<Cliente, ClienteEntity> converter)
         {
-            _tabelaCliente = new TableClient("UseDevelopmentStorage=true", "Cliente");
+            _serviceClient = serviceClient;
+            _serviceClient.CreateTableIfNotExists("Cliente");
+            _tableClient = _serviceClient.GetTableClient("Cliente");
             _converter = converter;
         }
 
         public Cliente AtualizarCliente(Cliente cliente)
         {
             cliente.Modificado = true;
-            _tabelaCliente.UpdateEntity(_converter.Convert(cliente), ETag.All);
+            _tableClient.UpdateEntity(_converter.Convert(cliente), ETag.All);
             return BuscarCliente(cliente.Id);
         }
 
         public Cliente BuscarCliente(int id)
         {
-            var entidade = _tabelaCliente.GetEntity<ClienteEntity>(id.ToString(), "");
+            var entidade = _tableClient.GetEntity<ClienteEntity>(id.ToString(), "");
             return _converter.Convert(entidade);
         }
 
@@ -38,7 +41,7 @@ namespace Api.Infra
         {
             List<Cliente> clientes = new List<Cliente>();
 
-            await foreach ( Page<ClienteEntity> page in _tabelaCliente.QueryAsync<ClienteEntity>().AsPages() )
+            await foreach ( Page<ClienteEntity> page in _tableClient.QueryAsync<ClienteEntity>().AsPages() )
             {
                 foreach ( ClienteEntity c in page.Values )
                 {
@@ -51,7 +54,7 @@ namespace Api.Infra
 
         public Cliente CriarNovoCliente(Cliente cliente)
         {
-            int maxId = _tabelaCliente.Query<ClienteEntity>()
+            int maxId = _tableClient.Query<ClienteEntity>()
                     .Select(c => c.Id)
                     .DefaultIfEmpty(0)
                     .Max();
@@ -60,7 +63,7 @@ namespace Api.Infra
 
             try
             {
-                _tabelaCliente.AddEntity(_converter.Convert(cliente));
+                _tableClient.AddEntity(_converter.Convert(cliente));
             }
             catch ( Exception e )
             {
@@ -74,7 +77,7 @@ namespace Api.Infra
         {
             try
             {
-                _tabelaCliente.DeleteEntity(id.ToString(), "");
+                _tableClient.DeleteEntity(id.ToString(), "");
                 return true;
             }
             catch ( Exception e )
